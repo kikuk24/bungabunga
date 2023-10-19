@@ -1,15 +1,28 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends MY_Controller
+{
 
   public function index()
   {
-    $this->load->view('page/home');
-    
-  }
+    $data['title']  = 'Homepage';
+    $data['content']  = $this->home->select(
+      [
+        'product.id', 'product.title AS product_title',
+        'product.description', 'product.image',
+        'product.price', 'product.is_available',
+        'category.title AS category_title', 'category.slug AS category_slug'
+      ]
+    )
+      ->join('category')
+      ->where('product.is_available', 1)
+      ->get();
+    $data['page']  = 'page/home/index';
 
+    $this->view($data);
+  }
 }
 
 /* End of file Home.php */
