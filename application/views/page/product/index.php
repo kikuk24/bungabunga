@@ -6,6 +6,7 @@
         <div class="card-header">
           <span>Produk</span>
           <a href="<?= base_url('product/create') ?>" class="btn btn-sm btn-secondary">Tambah</a>
+          <a href="<?= base_url('') ?>" class="btn btn-primary">Kembali ke beranda</a>
 
           <div class="float-end">
             <form action="<?= base_url("product/search") ?>" method="POST">
@@ -67,9 +68,9 @@
             </tbody>
           </table>
 
-          <nav aria-label="Page navigation example">
+          <!-- <nav aria-label="Page navigation example">
             <?= $pagination ?>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </div>

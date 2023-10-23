@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/libs/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/app.css">
+  <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
 
 
 </head>
@@ -18,9 +21,11 @@
 
   <?php $this->load->view($page); ?>
   <?php $this->load->view('layouts/_footer'); ?>
+
+
   <!-- <script src="<?= base_url('assets/libs/jquery/jquery.min.js') ?>"></script> -->
   <script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="./'assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
