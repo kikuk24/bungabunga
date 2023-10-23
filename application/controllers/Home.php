@@ -20,6 +20,7 @@ class Home extends MY_Controller
     )
       ->join('category')
       ->where('product.is_available', 1)
+      ->orderBy('product.id', 'DESC')
       ->get();
     $data['page']  = 'page/home/index';
 
