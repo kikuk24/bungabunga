@@ -7,7 +7,9 @@
           <span>Produk</span>
           <a href="<?= base_url('product/create') ?>" class="btn btn-sm btn-secondary">Tambah</a>
           <a href="<?= base_url('') ?>" class="btn btn-primary">Kembali ke beranda</a>
-
+          <nav aria-label="Page navigation example">
+            <?= $pagination ?>
+          </nav>
           <div class="float-end">
             <form action="<?= base_url("product/search") ?>" method="POST">
               <div class="input-group">
@@ -68,9 +70,7 @@
             </tbody>
           </table>
 
-          <!-- <nav aria-label="Page navigation example">
-            <?= $pagination ?>
-          </nav> -->
+
         </div>
       </div>
     </div>

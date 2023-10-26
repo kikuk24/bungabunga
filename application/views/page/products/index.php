@@ -1,4 +1,3 @@
 <main>
-  <?php $this->load->view('page/products/_allproducts');
-  ?>
+  <?php $this->load->view('page/products/_allproducts'); ?>
 </main>

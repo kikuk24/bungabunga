@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= isset($title) ? $title : 'Bunga-bunga' ?>- Bunga-bunga</title>
-  <link rel="stylesheet" href="<?= base_url('assets/libs/bootstrap/css/bootstrap.min.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('assets/libs/fontawesome/css/all.min.css') ?>">
-  <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
-  <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/app.css">
+  <title><?= isset($title) ? ucwords($title) : 'Jasa pembuatan Mahar Nikah Custom' ?></title>
+  <meta name="description" content="<?= isset($description) ? $description : 'Bunga-bunga' ?>">
+  <link rel="stylesheet" href="<?= base_url('/assets/libs/bootstrap/css/bootstrap.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('/assets/libs/fontawesome/css/all.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('/assets/css/app.css') ?>">
+
 
 
 </head>
@@ -24,8 +23,8 @@
 
 
   <!-- <script src="<?= base_url('assets/libs/jquery/jquery.min.js') ?>"></script> -->
-  <script src="<?= base_url('assets/libs/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
-  <script src="<?= base_url('assets/js/app.js') ?>"></script>
+  <script src="<?= base_url('/assets/libs/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+  <script src="<?= base_url('/assets/js/script.js') ?>"></script>
 </body>
 
 </html>

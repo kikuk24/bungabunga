@@ -13,7 +13,7 @@ class Home extends MY_Controller
     $data['content']  = $this->home->select(
       [
         'product.id', 'product.title AS product_title',
-        'product.description', 'product.image',
+        'product.description', 'product.image', 'product.slug',
         'product.price', 'product.is_available',
         'category.title AS category_title', 'category.slug AS category_slug'
       ]

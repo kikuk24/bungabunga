@@ -5,7 +5,7 @@
 
     <div class="menu">
       <div class="logo-toggle">
-        <span class="logo"><a href="<? base_url() ?>">Bungabunga.</a></span>
+        <span class="logo"><a href="<?= base_url() ?>">Bungabunga.</a></span>
         <i class='bx bx-x sidebar-close'></i>
       </div>
 

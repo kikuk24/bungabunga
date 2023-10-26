@@ -15,8 +15,8 @@ html {
 :root {
   background-color: #fff;
   --txtColor: #fff;
-  --selectionColor: #E56399;
-  --navColor: #E56399;
+  --selectionColor: #f88db9;
+    --navColor: #f88db9;
   --color3: #132043;
   --color4: #000;
   --bgProduct: #eeeeee;
@@ -48,14 +48,14 @@ body {
 
 body.dark {
   background-color: #060101;
-  --txtColor: #e56399;
+  --txtColor: #f88db9;
   --navColor: #060101;
   --color3: #CED8E1;
-  --color4: #e56399;
+  --color4: #f88db9;
   --bgProduct: #2a2929;
   --textcard1: #fff;
   --textcard2: #d8d2d2;
-  --cardColor: #E56399;
+  --cardColor: #f88db9;
 }
 
 /* navbar style */
@@ -249,7 +249,7 @@ nav .nav-bar .sidebar-open {
 .header {
   padding: 2rem;
   display: flex;
-  background-image: url('/vendor/img/banner.jpg');
+  background-image: url('../img/banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -304,6 +304,7 @@ nav .nav-bar .sidebar-open {
 .product-wrapper ul {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
   /* border: #000 solid 1px; */
 }
 
@@ -337,7 +338,7 @@ nav .nav-bar .sidebar-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -361,6 +362,7 @@ nav .nav-bar .sidebar-open {
 .page-wrapper {
   width: 230px;
   height: 100%;
+  margin: 0;
   /* display: table; */
 }
 
@@ -837,8 +839,13 @@ nav .nav-bar .sidebar-open {
   }
 
   .product-wrapper .category ul li a {
-    font-size: 56.4%;
-    padding: 0px 2px;
+    font-size: 10px;
+      width: 100%;
+      /* bottom: 25px; */
+      /* padding: 0px 2px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
 }
 
@@ -849,6 +856,7 @@ nav .nav-bar .sidebar-open {
   font-size: 15px;
   line-height: 24px;
   color: var(--txtColor);
+
 }
 
 .site-footer hr {
@@ -961,4 +969,18 @@ nav .nav-bar .sidebar-open {
   background-color: var(--navColor);
   color: var(--txtColor);
   padding: 10px;
+}
+.icon-hover:hover {
+  border-color: #3b71ca !important;
+  background-color: white !important;
+  color: #3b71ca !important;
+}
+
+.icon-hover:hover i {
+  color: #3b71ca !important;
+}
+
+.btn-foo {
+  background-color: var(--navColor) !important;
+  color: var(--txtColor) !important;
 }

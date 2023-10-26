@@ -28,6 +28,8 @@ class Product extends MY_Controller
     )
       ->join('category')
       ->paginate($page)
+      ->orderBy('product.id', 'DESC')
+
       ->get();
     $data['total_rows']  = $this->product->count();
     $data['pagination']  = $this->product->makePagination(
