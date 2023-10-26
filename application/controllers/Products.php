@@ -11,6 +11,7 @@ class Products extends MY_Controller
     $data['content']  = $this->products->select(
       [
         'product.id', 'product.title AS product_title',
+        'product.slug',
         'product.description', 'product.image',
         'product.price', 'product.is_available',
         'category.title AS category_title', 'category.slug AS category_slug'
@@ -72,6 +73,29 @@ class Products extends MY_Controller
 
     $data['page']    = 'page/home/_products';
 
+    $this->view($data);
+  }
+  public function detail($slug)
+  {
+    $data['products'] = $this->products->where('slug', $slug)->first();
+    if (!$data['products']) {
+      $this->session->set_flashdata('product_error', 'Produk tidak ditemukan');
+      redirect(base_url('/'));
+    }
+    // $this->products->table = 'product';
+    $data['product_detail'] = $this->products->select(
+      [
+        'product.id', 'product.title AS product_title',
+        'product.description', 'product.image',
+        'product.price', 'product.is_available',
+        'category.title AS category_title', 'category.slug AS category_slug'
+      ]
+    )
+      ->join('category')
+      ->where('product.slug', $slug)
+      ->get();
+    // $data['title']    = 'Detail Produk, ' . $data['products']->product_title;
+    $data['page']    = 'page/products/detail';
     $this->view($data);
   }
 

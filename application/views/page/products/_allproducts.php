@@ -12,7 +12,7 @@
     </div>
     <div class="d_flex flex-centerY-centerX container">
       <?php foreach ($content as $row) : ?>
-        <div class="page-wrapper">
+        <div class="page-wrapper" onclick="location.href='<?= base_url("/products/detail/$row->slug") ?>'">
           <div class="page-inner">
             <div class="row">
               <div class="el-wrapper">
