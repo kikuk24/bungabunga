@@ -88,10 +88,10 @@
               <?php foreach ($product_terbaru as $row) : ?>
                 <div class="d-flex mb-3">
                   <a href="#" class="me-3">
-                    <img src="<?= $row->image ? base_url("/images/product/$row->image") : base_url("/images/product/default.png") ?>" style="min-width: 96px; height: 96px;" class="img-md img-thumbnail" />
+                    <img src="<?= $row->image ? base_url("/images/product/$row->image") : base_url("/images/product/default.png") ?>" style="max-width: 96px; height: 96px;" class="img-md img-thumbnail" />
                   </a>
                   <div class="info">
-                    <a href="#" class="nav-link mb-1">
+                    <a href="<?= base_url("/products/detail/$row->slug") ?>" class="nav-link mb-1">
                       <?= ucwords($row->product_title) ?>
                     </a>
                     <strong class="text-dark">Rp<?= number_format($row->price, 0, ',', '.') ?></strong>

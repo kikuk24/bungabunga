@@ -22,11 +22,11 @@ class Products extends MY_Controller
       ->where('product.is_available', 1)
       ->get();
     $data['total_rows']  = $this->products->where('product.is_available', 1)->count();
-    $data['pagination']  = $this->product->makePagination(
-      base_url('product/search'),
-      3,
-      $data['total_rows']
-    );
+    // $data['pagination']  = $this->product->makePagination(
+    //   base_url('product/search'),
+    //   3,
+    //   $data['total_rows']
+    // );
 
     $data['page']  = 'page/products/index';
 
@@ -68,6 +68,7 @@ class Products extends MY_Controller
     $data['content']  = $this->products->select(
       [
         'product.id', 'product.title AS product_title',
+        'product.slug',
         'product.description', 'product.image',
         'product.price', 'product.is_available',
         'category.title AS category_title', 'category.slug AS category_slug'
@@ -95,6 +96,7 @@ class Products extends MY_Controller
       [
         'product.id', 'product.title AS product_title',
         'product.description', 'product.image',
+        'product.slug',
         'product.price', 'product.is_available',
         'category.title AS category_title', 'category.slug AS category_slug'
       ]
@@ -105,6 +107,7 @@ class Products extends MY_Controller
     $data['product_terbaru'] = $this->products->select(
       [
         'product.id', 'product.title AS product_title',
+        'product.slug',
         'product.description', 'product.image',
         'product.price', 'product.is_available',
         'category.title AS category_title', 'category.slug AS category_slug'

@@ -11,7 +11,7 @@
 
       <ul class="nav-links">
         <li><a href="<?= base_url() ?>">Beranda</a></li>
-        <li><a href="">Tentang</a></li>
+        <li><a href="<?= base_url('about') ?>">Tentang</a></li>
         <li><a href="<?= base_url('products') ?>">Produk</a></li>
         <li><a href="">Kontak</a></li>
         <li><a href="">Kontak</a></li>
@@ -23,6 +23,8 @@
             <ul class="dropdown-menu tex">
               <li><a class="dropdown-item text-dark" href="<?= base_url('product') ?>">Product</a></li>
               <li><a class="dropdown-item text-dark" href="<?= base_url('category') ?>">Kategori</a></li>
+              <li>
+              <li><a class="dropdown-item text-dark" href="<?= base_url('editcontent') ?>">Beranda Edit</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>

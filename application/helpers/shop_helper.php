@@ -22,6 +22,12 @@ function getCategories()
   $query  = $CI->db->get('category')->result();
   return $query;
 }
+function getHome()
+{
+  $CI = &get_instance();
+  $query = $CI->db->get('home')->result();
+  return $query;
+}
 
 function getCart()
 {

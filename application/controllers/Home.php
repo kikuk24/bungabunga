@@ -7,7 +7,6 @@ class Home extends MY_Controller
 
   public function index($page = null)
   {
-    $data['title']  = 'Jasa pembuatan Mahar Nikah Custom';
     $data['description'] = 'kami menydiakan jasa Custom Mahar Nikah';
     $data['keywords'] = 'Jasa Custom Mahar Nikah, Custom Mahar Nikah, Custom Mahar Nikah Custom';
     $data['content']  = $this->home->select(
