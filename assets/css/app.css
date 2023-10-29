@@ -16,7 +16,7 @@ html {
   background-color: #fff;
   --txtColor: #fff;
   --selectionColor: #f88db9;
-    --navColor: #f88db9;
+  --navColor: #f88db9;
   --color3: #132043;
   --color4: #000;
   --bgProduct: #eeeeee;
@@ -249,7 +249,7 @@ nav .nav-bar .sidebar-open {
 .header {
   padding: 2rem;
   display: flex;
-  background-image: url('../img/banner.jpg');
+  background-image: url('/vendor/img/banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -304,7 +304,6 @@ nav .nav-bar .sidebar-open {
 .product-wrapper ul {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
   /* border: #000 solid 1px; */
 }
 
@@ -338,7 +337,7 @@ nav .nav-bar .sidebar-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -362,7 +361,7 @@ nav .nav-bar .sidebar-open {
 .page-wrapper {
   width: 230px;
   height: 100%;
-  margin: 0;
+  cursor: pointer;
   /* display: table; */
 }
 
@@ -813,19 +812,9 @@ nav .nav-bar .sidebar-open {
     width: 100%;
   }
 
-  /* .product-wrapper ul li a {
-    text-decoration: none;
-    padding: 2px 2px;
-    font-size: 100px;
-    border: solid .6px #E56399;
-    border-radius: 20px;
-    color: var(--color4);
-    background-color: var(--bgProduct);
-  } */
 
   .product-wrapper {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     max-width: 100vw;
@@ -835,19 +824,12 @@ nav .nav-bar .sidebar-open {
   .product-wrapper ul {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 10px;
   }
 
-  .product-wrapper .category ul li a {
-    font-size: 10px;
-      width: 100%;
-      /* bottom: 25px; */
-      /* padding: 0px 2px; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
 }
 
 /* Footer */
@@ -971,6 +953,7 @@ nav .nav-bar .sidebar-open {
   color: var(--txtColor);
   padding: 10px;
 }
+
 .icon-hover:hover {
   border-color: #3b71ca !important;
   background-color: white !important;
@@ -984,4 +967,31 @@ nav .nav-bar .sidebar-open {
 .btn-foo {
   background-color: var(--navColor) !important;
   color: var(--txtColor) !important;
+}
+
+.about .about-judul {
+  margin-top: 70px;
+  padding: 10px 0px;
+  background-image: url('https://i.pinimg.com/1200x/a4/58/b1/a458b1aa3626134858a35821efedd9f8.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wa {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
 }
