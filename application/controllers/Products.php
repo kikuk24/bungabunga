@@ -20,13 +20,14 @@ class Products extends MY_Controller
       ->join('category')
       ->orderBy('product.id', 'DESC')
       ->where('product.is_available', 1)
+      // ->paginate($page)
       ->get();
     $data['total_rows']  = $this->products->where('product.is_available', 1)->count();
-    // $data['pagination']  = $this->product->makePagination(
-    //   base_url('product/search'),
-    //   3,
-    //   $data['total_rows']
-    // );
+    $data['pagination']  = $this->products->makePagination(
+      base_url('product/search'),
+      3,
+      $data['total_rows']
+    );
 
     $data['page']  = 'page/products/index';
 

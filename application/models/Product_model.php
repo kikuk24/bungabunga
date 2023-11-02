@@ -4,8 +4,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Product_model extends MY_Model
 {
-
-  // protected $perPage = 5;
+  // public $table = 'product';
+  protected $perPage = 10;
 
   public function getDefaultValues()
   {

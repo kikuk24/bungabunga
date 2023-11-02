@@ -77,9 +77,8 @@ class Category extends MY_Controller
       $data['title']      = 'Tambah Kategori';
       $data['input']      = $input;
       $data['form_action']  = base_url('category/create');
-      $data['page']      = 'page/category/form';
 
-      $this->view($data);
+      $this->load->view('page/admin/category/_form', $data);
       return;
     }
 
@@ -89,7 +88,7 @@ class Category extends MY_Controller
       $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan');
     }
 
-    redirect(base_url('category'));
+    redirect(base_url('dashboard/category'));
   }
 
   public function edit($id)
@@ -98,7 +97,7 @@ class Category extends MY_Controller
 
     if (!$data['content']) {
       $this->session->set_flashdata('warning', 'Maaf! Data tidak ditemukan!');
-      redirect(base_url('category'));
+      redirect(base_url('dashboard/category'));
     }
 
     if (!$_POST) {
@@ -112,7 +111,7 @@ class Category extends MY_Controller
       $data['form_action']  = base_url("category/edit/$id");
       $data['page']      = 'page/category/form';
 
-      $this->view($data);
+      $this->load->view('page/admin/category/_form', $data);
       return;
     }
 
@@ -122,13 +121,13 @@ class Category extends MY_Controller
       $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan.');
     }
 
-    redirect(base_url('category'));
+    redirect(base_url('dashboard/category'));
   }
 
   public function delete($id)
   {
     if (!$_POST) {
-      redirect(base_url('category'));
+      redirect(base_url('dashboard/category'));
     }
 
     if (!$this->category->where('id', $id)->first()) {
@@ -142,7 +141,7 @@ class Category extends MY_Controller
       $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan.');
     }
 
-    redirect(base_url('category'));
+    redirect(base_url('dashboard/category'));
   }
 
   public function unique_slug()

@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer z-3">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
@@ -15,7 +15,7 @@
         <ul class="footer-links">
           <?php foreach (getCategories() as $category) : ?>
 
-            <li><a href="<?= base_url("products/category/$category->slug") ?>"><?= $category->title ?></a></li>
+            <li><a href="<?= base_url("products/category/$category->slug") ?>"><?= ucwords($category->title) ?></a></li>
           <?php endforeach ?>
 
         </ul>

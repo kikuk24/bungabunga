@@ -33,7 +33,7 @@
                     <div class="h-bg-inner"></div>
                   </div>
 
-                  <a class="cart" href="wa.me/+6289612383979">
+                  <a class="cart" href="wa.me/+6285790481552" target="_blank">
                     <span class="price">Rp<?= number_format($row->price, 0, ',', '.') ?>,-</span>
                     <span class="add-to-cart">
                       <span class="txt">Beli Sekarang</span>

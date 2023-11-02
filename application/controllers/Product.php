@@ -29,7 +29,6 @@ class Product extends MY_Controller
       ->join('category')
       ->paginate($page)
       ->orderBy('product.id', 'DESC')
-
       ->get();
     $data['total_rows']  = $this->product->count();
     $data['pagination']  = $this->product->makePagination(
@@ -37,7 +36,7 @@ class Product extends MY_Controller
       2,
       $data['total_rows']
     );
-    $data['page']    = 'page/product/index';
+    $data['page']    = 'page/admin/product/index';
 
     $this->view($data);
   }
@@ -103,9 +102,8 @@ class Product extends MY_Controller
       $data['title']      = 'Tambah Produk';
       $data['input']      = $input;
       $data['form_action']  = base_url('product/create');
-      $data['page']      = 'page/product/form';
 
-      $this->view($data);
+      $this->load->view('page/admin/product/form', $data);
       return;
     }
 
@@ -115,7 +113,7 @@ class Product extends MY_Controller
       $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan');
     }
 
-    redirect(base_url('product'));
+    redirect(base_url('dashboard/products'));
   }
 
   public function edit($id)
@@ -149,9 +147,8 @@ class Product extends MY_Controller
     if (!$this->product->validate()) {
       $data['title']      = 'Ubah Produk';
       $data['form_action']  = base_url("product/edit/$id");
-      $data['page']      = 'page/product/form';
 
-      $this->view($data);
+      $this->load->view('page/admin/product/form', $data);
       return;
     }
 
@@ -162,8 +159,9 @@ class Product extends MY_Controller
       $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan');
     }
 
-    redirect(base_url('product'));
+    redirect(base_url('dashboard/products'));
   }
+
 
   public function delete($id)
   {
@@ -185,7 +183,7 @@ class Product extends MY_Controller
       $this->session->set_flashdata('error', 'Oops! Terjadi suatu kesalahan!');
     }
 
-    redirect(base_url('product'));
+    redirect(base_url('dashboard/products'));
   }
 
   public function unique_slug()

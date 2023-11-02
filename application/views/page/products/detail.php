@@ -27,7 +27,7 @@
             <?= $products->description ?>
           </p>
           <hr />
-          <a href="http://wa.me/+6289612383979" class="btn btn-foo shadow-0" target="_blank" rel="noopener noreferrer">Beli Sekarang</a>
+          <a href="https://wa.me/+6285790481552?text=Halo!%20apakah%20produk%20<?= $products->title ?>%20masih%20tersedia%3F" class="btn btn-foo shadow-0" target="_blank" rel="noopener noreferrer">Beli Sekarang</a>
         </div>
       </main>
     </div>
@@ -100,6 +100,13 @@
               <?php endforeach ?>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-header">
+          HELLO BOR
         </div>
       </div>
     </div>

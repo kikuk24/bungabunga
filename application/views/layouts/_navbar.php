@@ -13,7 +13,7 @@
         <li><a href="<?= base_url() ?>">Beranda</a></li>
         <li><a href="<?= base_url('about') ?>">Tentang</a></li>
         <li><a href="<?= base_url('products') ?>">Produk</a></li>
-        <li><a href="">Kontak</a></li>
+        <li><a href="<?= base_url('artikel') ?>">Artikel</a></li>
         <li><a href="">Kontak</a></li>
         <?php if ($this->session->userdata('role') == 'admin') : ?>
           <div class="btn-group">
@@ -37,8 +37,7 @@
 
     <div class="darkLight-searchBox">
       <div class="dark-light">
-        <i class="fa-regular fa-sun sun"></i>
-        <i class="fa-solid fa-moon moon"></i>
+
       </div>
 
       <div id="search" class="searchBox">

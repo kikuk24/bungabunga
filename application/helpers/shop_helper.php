@@ -15,11 +15,43 @@ function getDropdownList($table, $columns)
 
   return $options  = ['' => '- Select -'];
 }
-
+function getProduct()
+{
+  $CI = &get_instance();
+  $query = $CI->db->select(
+    [
+      'product.id',
+      'product.title AS product_title',
+      'product.slug',
+      'product.description',
+      'product.image',
+      'product.price',
+      'product.is_available',
+      'category.title AS category_title',
+      'category.slug AS category_slug'
+    ]
+  )
+    ->from('product')
+    ->join('category', 'category.id = product.id_category', 'left')
+    ->get();
+  return $query->result();
+}
+function countProduct()
+{
+  $CI = &get_instance();
+  $query = $CI->db->count_all_results('product');
+  return $query;
+}
 function getCategories()
 {
   $CI    = &get_instance();
   $query  = $CI->db->get('category')->result();
+  return $query;
+}
+function countCategory()
+{
+  $CI    = &get_instance();
+  $query  = $CI->db->count_all_results('category');
   return $query;
 }
 function getHome()
@@ -28,7 +60,12 @@ function getHome()
   $query = $CI->db->get('home')->result();
   return $query;
 }
-
+function countArtikel()
+{
+  $CI = &get_instance();
+  $query = $CI->db->count_all_results('artikel');
+  return $query;
+}
 function getCart()
 {
   $CI    = &get_instance();
